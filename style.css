@@ -1,0 +1,285 @@
+/* Algemeen */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+h1{
+    font-size: 46px;
+    padding-bottom: 36px 0;
+}
+
+h2{
+    font-size: 42px;
+    padding: 36px 0;
+}
+
+h3{
+    font-size: 24px;
+    padding: 36px 0;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+p{
+    color: #1D1D1F;
+}
+
+/* Header */
+header img{
+    width: 100vw;
+}
+
+/* Navigatie */
+nav{
+    display: flex;  /* Dit zorgt ervoor dat de container assen krijgt waarmee je de children kunt positioneren */
+    justify-content: center;    /* Horizontaal in het midden */
+    background-color: #0464FA ;
+}
+
+header img{
+    height: 700px;
+    width: 100vw;
+    object-fit: cover;
+}
+nav ul{
+    align-items: center; /* Alle items horizontaal centreren zodat de vlag en letters op dezelfde hoogte komen */
+    list-style: none;   /* Punten voor tekst weghalen */
+    display: flex;  /* Naast elkaar uitlijnen */
+
+}
+
+nav ul li{    
+    padding: 12px 0;    /* Ruimte tussen de nav items en de bovenkant van pagina */
+    margin-left: 36px;  /* Ruimte tussen de nav items */
+}
+
+nav ul li a{
+    color: #F2F2F2;
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    color: #FCD95C;
+}
+
+
+@media only screen and (max-width: 1145px) {
+    h1{
+        font-size: 36px;
+        padding: 16px 0;
+    }
+    h2{
+        font-size: 28px;
+        padding: 16px 0;
+    }
+    nav ul li a{
+        color: #F2F2F2;
+        font-size: 14px;
+    }
+    header img{
+        height: 500px;
+        width: 100vw;
+        object-fit: cover;
+        object-position: 80% 100%;;
+    }
+    }
+
+
+    @media only screen and (max-width: 763px) {
+    header img{
+        height: 300px;
+        width: 100vw;
+        object-fit: cover;
+        object-position: 80% 100%;;
+    }
+    }
+
+/* Home */
+
+/* Home: snelle navigatie */
+article:nth-child(1){
+    text-align: center; /* De tekst moet in het midden worden uitgelijnd*/
+    background-color: #fff;
+    padding: 3vw 0;
+    display: flex;
+    flex-direction: column; /* Tekst en buttons onder elkaar*/
+    
+   
+}   
+.container-snelle-navigatie{
+    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
+    justify-content: center;    /* De cards moeten op kleiner device in het midden komen */
+    display: flex;
+    flex-direction: row ;
+    margin: 16px 0;
+}
+
+article:nth-child(1) a{
+    background-color:#F2F2F2;
+    width: 310px;
+    border-radius: 16px;
+    padding: 36px 120px;
+    margin: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Icon uitlijnen in het midden */
+}
+
+article:nth-child(1) img{
+    margin-bottom: 12px;
+    width: 50px;  
+}
+article:nth-child(1) p{ /* Text box vergroten zodat hij niet door icon bij 50 px wordt afgekapt */
+    width: 340px;
+    color: #0464FA;   
+}
+
+
+/* Home: Laatste nieuws */
+article:nth-child(2){
+    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
+    justify-content: center;  /* De cards moeten op kleiner device in het midden komen */
+    align-items: center; /* Button, cards en titel in het midden uitlijnen */
+    display: flex;
+    flex-direction: column;
+
+}
+.container-niewsberichten{
+    flex-wrap: wrap;
+    justify-content: c enter;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* De cards komen op een kleiner device in het midden */
+
+}
+article:nth-child(2) img{
+    object-fit: cover; /* De afbeelding behoudt de juiste afmetingen */
+    height: 180px;
+    width: 388px;
+    border-radius: 16px 16px 0 0;   
+}
+article:nth-child(2) a{
+    margin: 36px;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+.test2{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0 16px  16px;
+    width: 388px;
+    background-color: white;
+    padding: 16px 24px;
+    text-align: left;
+}
+.test2 p:nth-child(1){
+    padding-bottom: 4px;
+    color: #6E6E73;
+    font-size: 14px;
+}
+.test2 p:nth-child(2){
+    font-size: 19px;
+    font-weight: 550;
+    padding-bottom: 6px;
+}
+.test2 p:nth-child(3){
+    color: #6E6E73;
+    font-size: 14px;
+}
+
+.button{
+    width: 200px;
+    text-decoration: none;
+    background-color: white;
+    color: #0464FA;
+    border: solid 1px #0464FA;
+    padding: 12px 24px 12px  24px;
+    text-align: center;
+}
+
+.button:hover{
+    color: #fff;
+    background-color: #0464FA;
+}
+
+/* Laatste nieuws */
+article:nth-child(3){
+    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
+    justify-content: center;  /* De cards moeten op kleiner device in het midden komen */
+    align-items: center; /* Button, cards en titel in het midden uitlijnen */
+    display: flex;
+    flex-direction: column;
+}
+
+article:nth-child(3) img{
+    height: 180px;
+    width: 388px;
+    border-radius: 16px 16px 0 0;   
+}
+article:nth-child(2) a{
+    margin: 36px;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+
+
+
+/* Contact */
+
+form{
+    margin: 36px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 16px 0;
+    padding: 16px;
+    font-size: 16px;
+    border: solid #d9d9d9;
+    border-radius: 16px;
+    width: 50%;
+}
+
+form textarea{
+    resize: none;
+}
+
+form button{
+    width: 200px;
+    text-decoration: none;
+    background-color: white;
+    color: #0464FA;
+    border: solid 1px #0464FA;
+    padding: 12px 24px 12px  24px;
+    text-align: center;
+    border-radius: 16px;
+
+
+}
+/* Footer */
+
+footer {
+    padding: 1vw 22vw;
+    background-color: #0464FA;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    color: #fff;
+}
