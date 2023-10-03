@@ -13,200 +13,177 @@ body{
 
 h1{
     font-size: 46px;
-    padding-bottom: 36px 0;
+    padding: 36px 0;
 }
 
 h2{
     font-size: 42px;
     padding: 36px 0;
+    color: #000;
 }
 
 h3{
     font-size: 24px;
-    padding: 36px 0;
-}
-
-
-a{
-    text-decoration: none;
-    
+    padding: 24px 0;
+    color: #1D1D1F;
 }
 
 p{
-    color: #1D1D1F;
+    font-size: 19px;
+    color: #1D1D1F; 
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    transition: transform 400ms 
+}
+
+a:hover{
+    transform: scale(1.01);
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.02);
+
+}
+@media only screen and (max-width: 1068px){
+    p{
+        font-size: 17px;
+        color: #1D1D1F;
+    }
 }
 
 /* Header */
 header img{
-    width: 100vw;
-}
-
-/* Navigatie */
-nav{
-    display: flex;  /* Dit zorgt ervoor dat de container assen krijgt waarmee je de children kunt positioneren */
-    justify-content: center;    /* Horizontaal in het midden */
-    background-color: #0464FA ;
-}
-
-header img{
-    height: 700px;
+    height: 70vh;
     width: 100vw;
     object-fit: cover;
 }
+@media only screen and (max-width: 1068px){
+    header img{
+        height: 40vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+}
+/* Navigatie */
 nav ul{
-    align-items: center; /* Alle items horizontaal centreren zodat de vlag en letters op dezelfde hoogte komen */
-    list-style: none;   /* Punten voor tekst weghalen */
-    display: flex;  /* Naast elkaar uitlijnen */
-
+    display: flex; 
+    background-color: #0464FA;
+    justify-content: center;
 }
 
-nav ul li{    
-    padding: 12px 0;    /* Ruimte tussen de nav items en de bovenkant van pagina */
-    margin-left: 36px;  /* Ruimte tussen de nav items */
+nav ul li{
+    margin: 12px 16px;
+    list-style: none;
 }
 
 nav ul li a{
+    text-decoration: none;  
     color: #F2F2F2;
-    font-size: 16px;
 }
 
 nav ul li a:hover{
-    color: #FCD95C;
+    text-decoration: none; 
+    color: #FCD95C; 
+    
 }
-
-
-@media only screen and (max-width: 1145px) {
-    h1{
-        font-size: 36px;
-        padding: 16px 0;
-    }
-    h2{
-        font-size: 28px;
-        padding: 16px 0;
-    }
-    nav ul li a{
-        color: #F2F2F2;
-        font-size: 14px;
-    }
-    header img{
-        height: 500px;
-        width: 100vw;
-        object-fit: cover;
-        object-position: 80% 100%;;
-    }
-    }
-
-
-    @media only screen and (max-width: 763px) {
-    header img{
-        height: 300px;
-        width: 100vw;
-        object-fit: cover;
-        object-position: 80% 100%;;
-    }
-    }
 
 /* Home */
-
-/* Home: snelle navigatie */
-article:nth-child(1){
-    text-align: center; /* De tekst moet in het midden worden uitgelijnd*/
-    background-color: #fff;
-    padding: 3vw 0;
-    display: flex;
-    flex-direction: column; /* Tekst en buttons onder elkaar*/
-    
-   
-}   
-.container-snelle-navigatie{
-    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
-    justify-content: center;    /* De cards moeten op kleiner device in het midden komen */
-    display: flex;
-    flex-direction: row ;
-    margin: 16px 0;
-}
-
-article:nth-child(1) a{
-    background-color:#F2F2F2;
-    width: 310px;
-    border-radius: 16px;
-    padding: 36px 120px;
-    margin: 36px;
+/* Home snelle navigatie */
+.snelle-navigatie-container{
+    background-color: #ffff;
     display: flex;
     flex-direction: column;
-    align-items: center;  /* Icon uitlijnen in het midden */
+    padding: 36px 0;
+    align-items: center;
+
 }
 
-article:nth-child(1) img{
+.snelle-navigatie-container img{
     margin-bottom: 12px;
     width: 50px;  
 }
-article:nth-child(1) p{ /* Text box vergroten zodat hij niet door icon bij 50 px wordt afgekapt */
-    width: 340px;
-    color: #0464FA;   
-}
 
-
-/* Home: Laatste nieuws */
-article:nth-child(2){
+.snelle-navigatie-container section{
     flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
-    justify-content: center;  /* De cards moeten op kleiner device in het midden komen */
-    align-items: center; /* Button, cards en titel in het midden uitlijnen */
-    display: flex;
-    flex-direction: column;
-
-}
-.container-niewsberichten{
-    flex-wrap: wrap;
-    justify-content: c enter;
     display: flex;
     flex-direction: row;
-    justify-content: center; /* De cards komen op een kleiner device in het midden */
-
+    justify-content: center;
+      
 }
-article:nth-child(2) img{
+.snelle-navigatie-container a{
+    background-color:#F5F5F7;
+    width: 310px;
+    margin: 0 36px 24px 36px;
+    padding: 36px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.snelle-navigatie-container p{
+    text-decoration: none;
+    color: #0464FA;  
+}
+
+
+/* Home laatste nieuws */
+.laatste-nieuws-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.laatste-nieuws-container section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+.laatste-nieuws-container a{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 36px;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+
+.laatste-nieuws-container img{
     object-fit: cover; /* De afbeelding behoudt de juiste afmetingen */
     height: 180px;
     width: 388px;
     border-radius: 16px 16px 0 0;   
 }
-article:nth-child(2) a{
-    margin: 36px;
-    background-color: #ffff;
-    border-radius: 16px;
-}
-.test2{
-    display: flex;
-    flex-direction: column;
-    border-radius: 0 0 16px  16px;
-    width: 388px;
-    background-color: white;
+
+.laatste-nieuws-container div{
     padding: 16px 24px;
+    width: 388px;
     text-align: left;
 }
-.test2 p:nth-child(1){
+
+div p:nth-child(1){
     padding-bottom: 4px;
     color: #6E6E73;
-    font-size: 14px;
+    font-size: 14px
 }
-.test2 p:nth-child(2){
+div p:nth-child(2){
     font-size: 19px;
     font-weight: 550;
     padding-bottom: 6px;
 }
-.test2 p:nth-child(3){
+div p:nth-child(3){
     color: #6E6E73;
     font-size: 14px;
 }
-
 .button{
     width: 200px;
+    border-radius: 16px;
+    padding: 12px 24px 12px  24px;
+    text-align: center;
     text-decoration: none;
     background-color: white;
     color: #0464FA;
     border: solid 1px #0464FA;
-    padding: 12px 24px 12px  24px;
-    text-align: center;
+
 }
 
 .button:hover{
@@ -214,30 +191,55 @@ article:nth-child(2) a{
     background-color: #0464FA;
 }
 
-/* Laatste nieuws */
-article:nth-child(3){
-    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
-    justify-content: center;  /* De cards moeten op kleiner device in het midden komen */
-    align-items: center; /* Button, cards en titel in het midden uitlijnen */
+/* Mooi wonen op Marken */
+.nieuws-artikel{
+    width: 60%;
+    margin: 2% 20%;
+}
+.nieuws-artikel h1{
+    padding: 0 6vw;
+    margin-bottom: 36px
+}
+.nieuws-artikel section{
+    padding: 0 6vw;
+    margin-bottom: 36px;
+}
+.nieuws-artikel img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+.nieuws-artikel p{
+    font-weight: 250;
+    
+}
+@media only screen and (max-width: 1068px){
+    .nieuws-artikel{
+        width: 80%;
+        margin: 4% 10%;
+    }
+
+}
+@media only screen and (max-width: 860px){
+    .nieuws-artikel{
+        width: 90%;
+        margin: 4% 5%;
+    }
+}
+
+/* Footer */
+footer{
     display: flex;
-    flex-direction: column;
+    background-color: #0464FA;
+    justify-content: center;
 }
-
-article:nth-child(3) img{
-    height: 180px;
-    width: 388px;
-    border-radius: 16px 16px 0 0;   
+footer p{
+    color: #F2F2F2;
+    padding: 12px 16px;
+    margin: 0 4vw;
 }
-article:nth-child(2) a{
-    margin: 36px;
-    background-color: #ffff;
-    border-radius: 16px;
-}
-
-
 
 /* Contact */
-
 form{
     margin: 36px 0;
     align-items: center;
@@ -256,31 +258,4 @@ form input, form textarea{
     width: 50%;
 }
 
-form textarea{
-    resize: none;
-}
 
-form button{
-    width: 200px;
-    text-decoration: none;
-    background-color: white;
-    color: #0464FA;
-    border: solid 1px #0464FA;
-    padding: 12px 24px 12px  24px;
-    text-align: center;
-    border-radius: 16px;
-
-
-}
-/* Footer */
-
-footer {
-    padding: 1vw 22vw;
-    background-color: #0464FA;
-    display: flex;
-    justify-content: space-between;
-}
-
-footer p {
-    color: #fff;
-}
