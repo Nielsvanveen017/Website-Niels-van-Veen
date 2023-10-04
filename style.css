@@ -271,6 +271,7 @@ form input, form textarea{
     border: solid #d9d9d9;
     border-radius: 16px;
     width: 50%;
+    resize: none;
 }
 
 
