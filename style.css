@@ -42,35 +42,6 @@ a:hover{
     box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.08);
 
 }
-@media only screen and (max-width: 1068px){
-    p{
-        font-size: 17px;
-        color: #1D1D1F;
-    }
-}
-@media only screen and (max-width: 947px){
-    h1{
-        font-size: 40px;
-    }
-    h2{
-        font-size: 36px;
-    }
-    h3{
-        font-size: 20px;
-    }
-}
-
-@media only screen and (max-width: 720px){
-    h1{
-        font-size: 28px;
-    }
-    h2{
-        font-size: 24px;
-    }
-    h3{
-        font-size: 18px;
-    }
-}
 
 /* Header */
 header img{
@@ -78,13 +49,7 @@ header img{
     width: 100vw;
     object-fit: cover;
 }
-@media only screen and (max-width: 1068px){
-    header img{
-        height: 40vh;
-        width: 100vw;
-        object-fit: cover;
-    }
-}
+
 
 /* Navigatie */
 nav{
@@ -145,7 +110,7 @@ nav ul li a:hover{
     text-decoration: none;
     color: #0464FA;  
 }
-
+    
 /* Home laatste nieuws */
 .laatste-nieuws-container{
     display: flex;
@@ -192,7 +157,7 @@ div p:nth-child(3){
     font-size: 14px;
 }
 .button{
-    width: 200px;
+    width: 307px;
     border-radius: 16px;
     padding: 12px 24px 12px  24px;
     text-align: center;
@@ -200,9 +165,7 @@ div p:nth-child(3){
     background-color: white;
     color: #0464FA;
     border: solid 1px #0464FA;
-
 }
-
 .button:hover{
     color: #fff;
     background-color: #0464FA;
@@ -235,19 +198,7 @@ div p:nth-child(3){
     font-weight: 250;
     margin-bottom: 1em;
 }
-@media only screen and (max-width: 1090px){
-    .nieuws-artikel{
-        width: 80%;
-        margin: 4% 10%;
-    }
 
-}
-@media only screen and (max-width: 947px){
-    .nieuws-artikel{
-        width: 90%;
-        margin: 4% 5%;
-    }
-}
 
 /* Footer */
 footer{
@@ -279,33 +230,105 @@ form input, form textarea{
     border: solid #d9d9d9;
     border-radius: 16px;
     width: 50%;
-    resize: none;
-    
+    resize: none;   
 }
 
-@media only screen and (max-width: 700px){
-    form input, form textarea{
-        border: 0;
-        margin: 16px 0;
-        padding: 16px;
-        font-size: 16px;
-        border: solid #d9d9d9;
-        border-radius: 16px;
-        width: 65%;
-        resize: none;
+/* CSS voor andere scherm groottes  */
+@media only screen and (max-width: 1090px){
+
+    /* Algemeen */
+    p{
+        font-size: 17px;
+        color: #1D1D1F;
     }
-}
 
-@media only screen and (max-width: 400px){
-    form input, form textarea{
-        border: 0;
-        margin: 16px 0;
-        padding: 16px;
-        font-size: 16px;
-        border: solid #d9d9d9;
-        border-radius: 16px;
+    /* Header */
+    header img{
+        height: 40vh;
+        width: 100vw;
+        object-fit: cover;
+    }  
+
+    /* Home laatste nieuws */
+    .nieuws-artikel{
         width: 80%;
+        margin: 4% 10%;
+    }
+  
+}
+
+@media only screen and (max-width: 947px){
+
+    /* Algemeen */
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 20px;
+    }
+
+    /* Home laatste nieuws */
+    .nieuws-artikel{
+        width: 90%;
+        margin: 4% 5%;
+    }
+}
+
+
+@media only screen and (max-width: 720px){
+
+    /* Algemeen */
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 18px;
+    }
+
+    /* Form */
+    form input, form textarea{
+        border: 0;
+        margin: 16px 0;
+        padding: 16px;
+        font-size: 16px;
+        border: solid #d9d9d9;
+        border-radius: 16px;
+        width: 388px;
         resize: none;
     }
 }
+@media only screen and (max-width: 400px){
+
+    /* Home laatste nieuws */
+    .laatste-nieuws-container a{
+        width: 307px;
+    }
+    .laatste-nieuws-container img{
+        width: 307px;
+    }
+    .laatste-nieuws-container div{
+        padding: 8px 12px;
+        width: 275px;
+        margin: 10px 16px 10px 16px;
+        }
+
+    /* Form */    
+    form input, form textarea{
+        border: 0;
+        margin: 16px 0;
+        padding: 16px;
+        font-size: 16px;
+        border: solid #d9d9d9;
+        border-radius: 16px;
+        width: 307px;
+        resize: none;
+    }
+}
+
 
