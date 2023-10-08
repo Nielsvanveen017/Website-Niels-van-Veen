@@ -185,6 +185,12 @@ div p:nth-child(3){
     font-weight: 250;
     margin-bottom: 1em;
 }
+iframe{
+    width: 100%;
+    height: 70vh;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
 
 /* Footer */
 footer{
@@ -259,6 +265,9 @@ form input, form textarea{
     .nieuws-artikel{
         width: 90%;
         margin: 4% 5%;
+    }
+    iframe{
+        height: 30vh;
     }
     
      /* Footer */
