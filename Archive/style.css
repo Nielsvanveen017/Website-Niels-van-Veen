@@ -1,0 +1,334 @@
+/* Algemeen */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Oxygen', sans-serif;
+}
+body{
+    background-color: #F5F5F7;
+}
+h1{
+    font-size: 46px;
+    padding: 36px 0;
+}
+h2{
+    font-size: 42px;
+    padding: 36px 0;
+    color: #000;
+}
+h3{
+    font-size: 28px;
+    padding: 24px 0;
+    color: #1D1D1F;
+}
+p{
+    font-size: 19px;
+    color: #1D1D1F; 
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+    transition: transform 400ms 
+}
+a:hover{
+    transform: scale(1.01);
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+header img{
+    height: 70vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+/* Navigatie */
+nav{
+    background-color: #0464FA;
+}
+nav ul{
+    display: flex; 
+    justify-content: center;
+}
+nav ul li{
+    margin: 12px 16px;
+    list-style: none;
+    background-color: transparent;
+}
+nav ul li a{
+    text-decoration: none;  
+    color: #F2F2F2;
+}
+nav ul li a:hover{
+    transition: 0.35s;
+    text-decoration: none; 
+    color: #FFCE21; 
+    box-shadow: none;    
+}
+
+/* Home --> snelle navigatie */
+.snelle-navigatie-container{
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 0;
+    align-items: center;
+}
+.snelle-navigatie-container img{
+    margin-bottom: 12px;
+    width: 50px;  
+} 
+.snelle-navigatie-container section{
+    flex-wrap: wrap; /* De cards moeten op een kleiner scherm onder elkaar komen */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;     
+}
+.snelle-navigatie-container a{
+    background-color:#F5F5F7;
+    width: 310px;
+    margin: 24px 36px 24px 36px;
+    padding: 36px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.snelle-navigatie-container p{
+    text-decoration: none;
+    color: #0464FA;  
+}
+    
+/* Home --> laatste nieuws (ook op laatste nieuws pagina) */
+.laatste-nieuws-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 0;
+}
+.laatste-nieuws-container section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;  
+}
+.laatste-nieuws-container a{
+    display: flex;
+    flex-direction: column;
+    margin: 24px 36px;
+    background-color: #ffff;
+    border-radius: 16px;
+}
+.laatste-nieuws-container img{
+    object-fit: cover; /* De afbeelding behoudt de juiste afmetingen */
+    height: 180px;
+    width: 388px;
+    border-radius: 16px 16px 0 0;   
+}
+.laatste-nieuws-container div{
+    padding: 16px 24px;
+    width: 388px;
+}
+div p:nth-child(1){
+    padding-bottom: 4px;
+    color: #6E6E73;
+    font-size: 14px
+}
+div p:nth-child(2){
+    font-weight: 550;
+    padding-bottom: 6px;
+}
+div p:nth-child(3){
+    color: #6E6E73;
+    font-size: 14px;
+}
+.button{
+    width: 307px;
+    border-radius: 16px;
+    padding: 12px 24px 12px  24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    color: #0464FA;
+    border: solid 1px #0464FA;
+}
+.button:hover{
+    color: #fff;
+    background-color: #0464FA;
+}
+
+/* Mooi wonen op Marken en nieuws artikelen */
+.nieuws-artikel{
+    width: 60%;
+    margin: 2% 20%;
+}
+.nieuws-artikel h1{
+    padding: 0 6vw;
+    margin-bottom: 36px
+}
+.nieuws-artikel section{
+    padding: 0 6vw;
+    margin-bottom: 36px;
+}
+.nieuws-artikel img{
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    transition: transform 400ms 
+}
+.nieuws-artikel img:hover{
+    transform: scale(1.01);
+}
+.nieuws-artikel p{
+    font-weight: 250;
+    margin-bottom: 1em;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    background-color: #0464FA;
+    justify-content: space-between;
+}
+footer p{
+    color: #F2F2F2;
+    padding: 12px 16px;
+    margin: 0 12vw;
+    font-size: 16px;
+}
+
+/* Contact */
+form{
+    margin: 36px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+form input, form textarea{
+    border: 0;
+    margin: 16px 0;
+    padding: 16px;
+    font-size: 16px;
+    border: solid #d9d9d9;
+    border-radius: 16px;
+    width: 50%;
+    resize: none;   
+}
+
+/* CSS voor andere scherm groottes  */
+@media only screen and (max-width: 1090px){
+
+    /* Algemeen */
+    p{
+        font-size: 17px;
+        color: #1D1D1F;
+    }
+
+    /* Header */
+    header img{
+        height: 40vh;
+        width: 100vw;
+        object-fit: cover;
+    }  
+
+    /* Home laatste nieuws */
+    .nieuws-artikel{
+        width: 80%;
+        margin: 4% 10%;
+    }
+}
+
+@media only screen and (max-width: 947px){
+
+    /* Algemeen */
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 20px;
+    }
+
+    /* Home laatste nieuws */
+    .nieuws-artikel{
+        width: 90%;
+        margin: 4% 5%;
+    }
+    
+     /* Footer */
+    footer p{
+        font-size: 14px;
+        margin: 0 6vw;
+    }  
+}
+
+@media only screen and (max-width: 720px){
+
+    /* Algemeen */
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{ 
+        font-size: 18px;
+    }
+
+    /* Form */
+    form input, form textarea{
+        border: 0;
+        margin: 16px 0;
+        padding: 16px;
+        font-size: 16px;
+        border: solid #d9d9d9;
+        border-radius: 16px;
+        width: 388px;
+        resize: none;
+    }
+}
+
+@media only screen and (max-width: 463px){
+    /* Navigatie */
+    nav ul{
+        margin: 0;
+        background-color: #0464FA;
+        flex-direction: column;
+        align-items: center;
+        padding: 36px 16px;
+     }
+    }
+ 
+@media only screen and (max-width: 400px){
+
+    /* Home laatste nieuws */
+    .laatste-nieuws-container a{
+        width: 307px;
+    }
+    .laatste-nieuws-container img{
+        width: 307px;
+    }
+    .laatste-nieuws-container div{
+        padding: 8px 12px;
+        width: 275px;
+        margin: 10px 16px 10px 16px;
+        }
+
+    /* Form */    
+    form input, form textarea{
+        border: 0;
+        margin: 16px 0;
+        padding: 16px;
+        font-size: 16px;
+        border: solid #d9d9d9;
+        border-radius: 16px;
+        width: 307px;
+        resize: none;
+    }
+}
